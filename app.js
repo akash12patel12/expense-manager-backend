@@ -3,8 +3,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const sequelize = require('./util/database');
-const helmet = require('helmet')
-const morgan = require('morgan');
+// const helmet = require('helmet')
+// const morgan = require('morgan');
 const fs = require('fs');
 
 
@@ -26,8 +26,8 @@ const accessLogStream = fs.createWriteStream(path.join(__dirname , 'access.log')
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
-app.use(helmet())
-app.use(morgan('combined', {stream : accessLogStream}))
+// app.use(helmet())
+// app.use(morgan('combined', {stream : accessLogStream}))
 
 app.use(userRoutes);
 app.use(expenseRoutes);

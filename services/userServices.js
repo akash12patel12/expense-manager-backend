@@ -3,7 +3,10 @@ const Expense = require('../models/expense')
 const getExpenses = async(req, where)=>{
    if(where){
      const expenses = await Expense.findAll(where)
-     return expenses;
+     if(expenses)
+       return expenses;
+     else 
+        return {'message' :  'FoundNot'}
 
    }
  
