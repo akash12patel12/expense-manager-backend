@@ -1,4 +1,5 @@
-let apiUrl = "http://65.0.86.230:3000"
+// let apiUrl = "http://65.0.86.230:3000"
+let apiUrl = 'http://localhost:3000'
 function registeruser(e) {
   e.preventDefault();
   const user = {

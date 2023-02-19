@@ -33,9 +33,10 @@ app.use(userRoutes);
 app.use(expenseRoutes);
 app.use(premiumRoutes);
 app.use(resetpasswordRoutes);
+
 app.use((req,res)=>{
     res.sendFile(path.join(__dirname, `public/${req.url}`));
-  })
+})
   
 
 
