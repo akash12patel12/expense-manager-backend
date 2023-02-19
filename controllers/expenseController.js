@@ -1,6 +1,13 @@
 const Expense = require("../models/expense");
 const User = require("../models/user");
 const UserServices = require("../services/userServices");
+
+exports.getTotalOfUser =(req,res)=>{
+  User.findByPk(req.user.userId).then(user=>{
+    res.json({total : user.totalExpenses})
+  }).catch(console.log(err))
+}
+
 exports.addex = (req, res) => {
   Expense.create({
     amount: req.body.amount,

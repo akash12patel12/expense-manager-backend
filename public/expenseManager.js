@@ -102,6 +102,9 @@ async function getTotalNumberOfExpenses(){
    })
 }
 
+
+
+
 paginate();
 async function paginate(){
  let count = await getTotalNumberOfExpenses();
@@ -118,6 +121,12 @@ async function paginate(){
     // console.log(paginationDiv.innerHTML);
     i++;
   } 
+}
+
+getTotalOfUser();
+async function getTotalOfUser(){
+  let totalOfUser = await axios.get(`${apiUrl}/getTotalOfUser`, config );
+  console.log(totalOfUser, 'tttttttttttttt');
 }
 
 
