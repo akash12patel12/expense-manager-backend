@@ -1,6 +1,6 @@
 const limitGlobal =  localStorage.getItem('limit') ? parseInt(localStorage.getItem('limit')) : 5 ;
-// let apiUrl = `http://65.0.86.230:3000`;
-let apiUrl = 'http://localhost:3000'
+let apiUrl = `http://65.0.86.230:3000`;
+// let apiUrl = 'http://localhost:3000'
 
 const config = {
   headers: {
