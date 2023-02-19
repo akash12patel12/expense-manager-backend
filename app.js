@@ -21,7 +21,7 @@ const Order = require('./models/order');
 const ForgotPassword = require('./models/forgotpassword');
 const path = require('path');
 
-const accessLogStream = fs.createWriteStream(path.join(__dirname , 'access.log'), { flags : 'a' })
+// const accessLogStream = fs.createWriteStream(path.join(__dirname , 'access.log'), { flags : 'a' })
 
 const app = express();
 app.use(cors());
